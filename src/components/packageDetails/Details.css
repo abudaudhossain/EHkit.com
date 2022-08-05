@@ -1,0 +1,52 @@
+.destination-details .des-detail h3 {
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+
+.destination-details .des-detail p {
+    margin-bottom: 20px;
+}
+
+.destination-details .des-detail ul {
+    margin-top: 20px;
+}
+
+.destination-details .des-detail ul li p {
+    margin-bottom: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+}
+
+.destination-details .des-detail ul li p i {
+    color: #ff5e14;
+    display: block;
+    margin-right: 8px;
+}
+
+.detail-table {
+    margin-top: 50px;
+}
+
+.detail-table .table tbody tr td {
+    font-size: 16px;
+    color: #1d3271;
+    font-weight: 500;
+    padding: 18px;
+    border: 1px solid #dee2e6;
+}
+
+.detail-table .table tbody tr td span {
+    color: #ff5e14;
+    font-size: 15px;
+}
+
+.form-bg {
+    padding: 30px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    margin-top: 30px;
+  }

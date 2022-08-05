@@ -6,11 +6,15 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Products from './pages/Products'
 import MyProfile from './pages/MyProfile'
+import Layout from './components/Layout'
+
+
 
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter> 
+    <Layout >
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -18,6 +22,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/myProfile" element={<MyProfile />} />
       </Routes>
+      </Layout>
     </BrowserRouter>
   );
 }

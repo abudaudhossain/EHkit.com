@@ -1,0 +1,97 @@
+.banner-section {
+    background: var(--clrdefault);
+    padding: 60px 0px;
+}
+
+@media screen and (max-width: 575px) {
+    .banner-section {
+        padding: 80px 0px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .banner-section {
+        padding: 60px 0px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .banner-section .banner-image {
+        margin-top: 30px;
+    }
+}
+
+.banner-section .banner-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.banner-section .banner-content p {
+    max-width: 550px;
+    margin: 15px 0 40px;
+}
+
+.banner-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 375px) {
+    .banner-btn .gs-btn {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
+
+.banner-btn .video-btn {
+    margin-left: 20px;
+}
+
+.banner-btn .video-btn a {
+    color: var(--clrheading);
+    font-size: 17px;
+    -webkit-transition: 0.3s linear;
+    transition: 0.3s linear;
+}
+
+@media screen and (max-width: 375px) {
+    .banner-btn .video-btn a {
+        font-size: 15px;
+    }
+}
+
+.banner-btn .video-btn a i {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 13px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: var(--clrMain);
+    background: var(--clrdefault);
+    -webkit-box-shadow: 0px 0px 20px rgba(214, 214, 214, 0.5);
+    box-shadow: 0px 0px 20px rgba(214, 214, 214, 0.5);
+    -webkit-transition: 0.3s linear;
+    transition: 0.3s linear;
+}
+
+.banner-btn .video-btn a:hover {
+    color: var(--clrMain);
+}
+
+.banner-btn .video-btn a:hover i {
+    background: var(--clrMain);
+    color: var(--clrdefault) !important;
+}

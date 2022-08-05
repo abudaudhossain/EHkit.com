@@ -1,0 +1,31 @@
+ .des-detail h3 {
+    padding-top: 30px;
+    margin-bottom: 10px;
+  }
+ .des-detail p {
+    margin-bottom: 20px;
+  }
+
+ .des-detail ul {
+    margin-top: 20px;
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+  
+.des-detail ul li p {
+    margin-bottom: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+  
+ .des-detail ul li p i {
+    color: #ff5e14;
+    display: block;
+    margin-right: 8px;
+  }
+  
+  

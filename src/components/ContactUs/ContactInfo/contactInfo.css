@@ -1,0 +1,48 @@
+.contact-page {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  /* ==========================
+      MAP END
+  ============================ */
+  .single-border {
+    padding-bottom: 60px;
+  }
+  
+  .single-border h2 {
+    margin-top: 15px;
+  }
+  
+  .contact-inform .address {
+    padding-bottom: 45px;
+  }
+  
+  .contact-inform i {
+    font-size: 40px;
+    color: #ff5e14;
+    border-radius: 50px;
+    text-align: center;
+  }
+  
+  .contact-inform .information {
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    font-weight: 400;
+    color: #7c7770;
+    margin-left: 30px;
+  }
+  
+  .contact-inform .information a {
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    color: #7c7770;
+    font-weight: 400;
+    -webkit-transition: 0.3s linear;
+    transition: 0.3s linear;
+  }
+  
+  .contact-inform .information a:hover {
+    color: #ff5e14;
+  }
+  

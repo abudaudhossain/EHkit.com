@@ -1,0 +1,182 @@
+.footer-section {
+    background: url("../../../assets/images/footer/footer-bg.png");
+    position: relative;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    padding-top: 40px;
+}
+
+.footer-widget {
+    padding: 40px 0px;
+}
+
+@media screen and (max-width: 479px) {
+    .footer-widget {
+        padding: 20px 0px;
+    }
+}
+
+.footer-widget .footer-widget-heading {
+    margin-bottom: 30px;
+}
+
+.footer-widget .footer-logo img {
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.footer-widget p {
+    margin-top: 20px;
+}
+
+.footer-widget .footer-social-icon {
+    margin-top: 10px;
+}
+
+.footer-widget .footer-social-icon h4 {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-widget .footer-social-icon a {
+    background: var(--clrMain);
+    color: var(--clrdefault);
+    font-size: 14px;
+    margin-right: 5px;
+    height: 35px;
+    width: 35px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 50%;
+    -webkit-transition: 0.3s linear;
+    transition: 0.3s linear;
+}
+
+.footer-widget .footer-social-icon a:hover {
+    background: var(--clrheading);
+}
+
+.footer-widget .media {
+    margin-bottom: 20px;
+}
+
+.footer-widget .media img {
+    margin-right: 20px;
+    max-width: 100px;
+    background: var(--clrdefault);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.footer-widget .media .content {
+    max-width: 170px;
+}
+
+.footer-widget .media .content a {
+    font-family: "Roboto";
+    font-size: 16px;
+    color: var(--clrPrimary);
+    font-weight: 400;
+    -webkit-transition: 0.3s linear;
+    transition: 0.3s linear;
+}
+
+.footer-widget .media .content a:hover {
+    color: var(--clrMain);
+}
+
+.footer-widget .media .content span {
+    font-size: 12px;
+    color: var(--clrPrimary);
+    text-transform: uppercase;
+    margin-top: 5px;
+    display: block;
+}
+
+.footer-widget ul li a {
+    font-family: "Roboto";
+    font-size: 16px;
+    color: var(--clrPrimary);
+    font-weight: 400;
+    display: inline-block;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    -webkit-transition: 0.3s linear;
+    transition: 0.3s linear;
+}
+
+.footer-widget ul li a:hover {
+    color: var(--clrMain);
+}
+
+.subscribe-form {
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.subscribe-form input {
+    width: 100%;
+    padding: 14px 28px;
+    background: transparent;
+    border: 1px solid var(--clrMain);
+    color: var(--clrPrimary);
+    outline: none;
+}
+
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: var(--clrMain);
+    padding: 13px 20px;
+    border: 1px solid var(--clrMain);
+    outline: none;
+}
+
+.subscribe-form button i {
+    color: var(--clrdefault);
+    font-size: 22px;
+    -webkit-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+}
+
+.copyright-area {
+    padding: 25px 0;
+    border-top: 1px solid var(--clrbg);
+}
+
+.copyright-area .copyright-text p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--clrPrimary);
+}
+
+.copyright-area .copyright-text p a {
+    color: var(--clrMain);
+}
+
+.copyright-area .footer-menu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.copyright-area .footer-menu li a {
+    font-size: 14px;
+    color: var(--clrPrimary);
+}
+
+.copyright-area .footer-menu li:hover a {
+    color: var(--clrMain);
+}
