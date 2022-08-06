@@ -13,22 +13,22 @@ import "./Reviews.css"
 const reviews = [
     {
         name: "Albert Smith",
-        title: "Traveller",
+        title: "Businessman",
         describe: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. when an unknown printer took a galley of type and scrambled it to."
     },
     {
         name: "Abu Daud",
-        title: "Developer",
+        title: "Software Developer",
         describe: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. when an unknown printer took a galley of type and scrambled it to."
     },
     {
         name: "Albert Smith",
-        title: "Traveller",
+        title: "Teacher",
         describe: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. when an unknown printer took a galley of type and scrambled it to."
     },
     {
         name: "Albert Smith",
-        title: "Traveller",
+        title: "Software Engineer",
         describe: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. when an unknown printer took a galley of type and scrambled it to."
     },
     {
