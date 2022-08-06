@@ -15,6 +15,7 @@
 }
 
 .popular-pack-block .item-image {
+    height: 200px;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -22,7 +23,7 @@
 
 .popular-pack-block .item-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     position: relative;
     -webkit-transform: scale(1.1);
@@ -70,29 +71,6 @@
     margin-bottom: 15px;
 }
 
-.popular-pack-block .item-content .location {
-    font-family: "Roboto";
-    font-size: 15px;
-    color: #7c7770;
-    font-weight: 400;
-    display: block;
-}
-
-.popular-pack-block .item-content .location span {
-    color: #7c7770;
-}
-
-.popular-pack-block .item-content .days span {
-    font-family: "Roboto";
-    font-size: 14px;
-    color: #fff;
-    background: #ff5e14;
-    padding: 4px 10px;
-    border-radius: 3px;
-    margin-top: 10px;
-    font-weight: 400;
-    display: block;
-}
 
 .popular-pack-block .item-content .review {
     margin-top: 10px;

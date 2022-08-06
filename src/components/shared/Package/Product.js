@@ -1,25 +1,22 @@
 import React from 'react'
-import "./package.css"
-import img from "../../../assets/images/popular/1.jpg"
+import "./product.css"
 import { Link } from 'react-router-dom'
-const Package = () => {
+
+const Product = () => {
     return (
-        <Link to="/details/package/2">
+        <Link to="/details/product/2">
             <div className="popular-pack-block">
                 <div className="item-image">
-                    <img src={img} alt="img" />
+                    <img src="https://www.furniturebari.com/image/cache/catalog/Sofa/US001/U-Shape%20Sofa%20(16)-500x554.jpg" alt="img" />
                     <div className="ribbon">$200</div>
                 </div>
                 <div className="item-content">
-                    <h4><a href="#">Brazil Sea Beach</a></h4>
+                    <h4><a href="#">Modern U Shaped Fabrics Leather Sofa Bed US001</a></h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam dicta at aliquam...</p>
-                    <div className="location">
-                        <i className="fa-solid fa-location-dot pe-1"></i>
-                        <span>Praia do cassinobeach, Brazil</span>
-                    </div>
+                    
                     <div className="d-flex align-items-center justify-content-between">
                         <div className="days">
-                            <span>5 days - 4 night</span>
+                            <Link to="/pu" className="gs-btn gs-btn-primary">Purchase</Link>
                         </div>
                         <div className="review">
 
@@ -38,4 +35,4 @@ const Package = () => {
     )
 }
 
-export default Package
+export default Product

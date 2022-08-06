@@ -4,10 +4,10 @@
     --clrBlack: #000000;
     --clrdefault: #fff;
     --clrMain: #ff5e14;
-    --clrSecondary: #ff5e14;
     --clrheading: #1d3271;
     --clrPrimary: #7c7770;
     --clrbg: #f5f6f6;
+    --clrtitlebg: #ff5e140f;
 }
 
 * {
@@ -46,12 +46,54 @@ h1 {
     font-weight: 700;
 }
 
+
+h2 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
 p {
     font-size: 16px;
     font-weight: 400;
     color: var(--clrBlack)
 }
 
+.section-title {
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h6 {
+    font-family: "Roboto";
+    color: var(--clrMain);
+    background: var(--clrtitlebg);
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 2px 17px;
+    border-radius: 5px;
+}
+
+
+
+section {
+    display: block;
+    position: relative;
+    padding: 90px 0;
+    width: 100%;
+}
 
 .gs-btn {
     font-family: "Josefin Sans";
