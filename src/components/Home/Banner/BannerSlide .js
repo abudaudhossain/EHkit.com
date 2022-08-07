@@ -23,7 +23,7 @@ const BannerSlide = ({ banner }) => {
                             
                             <VideoPlayer
                                 show={modalShow}
-                                onHide={() => setModalShow(false)}
+                                onHide={() => setModalShow(false)} 
                             />
                         </div>
                     </div>

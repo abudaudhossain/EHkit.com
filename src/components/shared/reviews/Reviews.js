@@ -6,7 +6,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
-
 import Review from './Review'
 import "./Reviews.css"
 

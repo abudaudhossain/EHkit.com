@@ -22,7 +22,7 @@
 }
 
 .destination-details .des-detail ul li p i {
-    color: #ff5e14;
+    color: var(--clrMain);
     display: block;
     margin-right: 8px;
 }
@@ -33,14 +33,14 @@
 
 .detail-table .table tbody tr td {
     font-size: 16px;
-    color: #1d3271;
+    color: var(--clrheading);
     font-weight: 500;
     padding: 18px;
     border: 1px solid #dee2e6;
 }
 
 .detail-table .table tbody tr td span {
-    color: #ff5e14;
+    color: var(--clrMain);
     font-size: 15px;
 }
 

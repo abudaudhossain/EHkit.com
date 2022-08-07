@@ -8,7 +8,9 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import Product from '../shared/Package/Product';
 
-const products = [1, 2, 3, 4, 5, 6, 7, 8]
+import productsInfo from '../../data/products';
+
+
 
 const PopularProducts = () => {
     return (
@@ -27,9 +29,9 @@ const PopularProducts = () => {
                 <div className="row">
 
                     {
-                        products.map((feature, index) => {
+                        productsInfo().slice(1, 9).map((product, index) => {
                             return <div key={index}  className="col-lg-3 col-md-6 col-sm-6">
-                                <Product />
+                                <Product product={product} />
                             </div>
                         })
                     }

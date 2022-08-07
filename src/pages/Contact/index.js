@@ -1,8 +1,11 @@
 import React from 'react'
+import Contact from '../../components/ContactUs/Contact'
 
 const Index = () => {
   return (
-    <div>Contacts</div>
+    <>
+    <Contact />
+    </>
   )
 }
 

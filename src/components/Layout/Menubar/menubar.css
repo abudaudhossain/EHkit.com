@@ -23,7 +23,7 @@
 }
 
 .nav-item a:hover {
-    color: #ff5e14 !important;
+    color: var(--clrMain) !important;
 }
 
 .dropdown-menu.show {

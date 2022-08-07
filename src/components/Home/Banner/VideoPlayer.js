@@ -43,7 +43,7 @@ const VideoPlayer = (props) => {
                 style={{margin: "auto"}}
                     playing={true}
                     controls = {true}
-                url='https://www.youtube.com/watch?v=YLslsZuEaNE' />
+                url='https://www.youtube.com/watch?v=k6ru0sfMktI' />
             </Modal.Body>
             
         </Modal>

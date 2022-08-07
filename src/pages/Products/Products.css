@@ -1,0 +1,9 @@
+.nav-link{
+    font-size: 16px;
+    color: var(--clrheading);
+    font-weight: 500;
+   transition: all 0.2s;
+}
+.nav-link:hover{
+    color: var(--clrMain)
+}

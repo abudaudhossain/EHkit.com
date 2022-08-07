@@ -15,7 +15,7 @@
 }
 
 .item-icon-content i {
-    color: #ff5e14;
+    color: var(--clrMain);
     font-size: 17px;
 }
 
@@ -26,7 +26,7 @@
 .item-icon-content a {
     font-family: "Roboto";
     font-size: 16px;
-    color: #1d3271;
+    color: var(--clrheading);
     font-weight: 700;
     margin-left: 8px;
     -webkit-transition: 0.3s linear;
@@ -34,7 +34,7 @@
 }
 
 .item-icon-content a:hover {
-    color: #ff5e14;
+    color: var(--clrMain);
 }
 
 .item-btn {
@@ -67,7 +67,7 @@
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background-color: #ff5e14;
+    background-color: var(--clrMain);
     border-radius: 50%;
     color: #1086ff;
     display: block;
@@ -85,7 +85,7 @@
     top: 0px;
     left: 0px;
     font-size: 20px;
-    color: #fff;
+    color: var(--clrdefault);
 }
 
 @media screen and (max-width: 479px) {
@@ -107,7 +107,7 @@
     animation: beat 1.5s linear infinite;
     height: 100%;
     width: 100%;
-    border: 5px solid #ff5e14;
+    border: 5px solid var(--clrMain);
     border-radius: 50%;
     z-index: -1;
 }
@@ -121,7 +121,7 @@
     bottom: 0;
     -webkit-animation: beat 2.2s linear infinite;
     animation: beat 2.2s linear infinite;
-    border: 5px solid #fff;
+    border: 5px solid var(--clrdefault);
     border-radius: 50%;
     height: 100%;
     width: 100%;
@@ -172,7 +172,7 @@
     height: auto;
     display: block;
     margin: 0 auto;
-    background: #fff;
+    background: var(--clrdefault);
     padding: 10px;
     border-radius: 10px;
     -webkit-box-shadow: 0px 2px 22px rgba(93, 93, 93, 0.13);

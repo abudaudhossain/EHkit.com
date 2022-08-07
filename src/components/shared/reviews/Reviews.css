@@ -31,7 +31,7 @@
 
 .test-item .quote {
     font-size: 60px;
-    color: #ff5e14;
+    color: var(--clrMain);
     position: absolute;
     top: 5px;
     opacity: .1;
@@ -60,19 +60,19 @@
 
 .test-item .content .title h4 a {
     font-size: 20px;
-    color: #1d3271;
+    color: var(--clrheading);
     line-height: 20px;
     -webkit-transition: 0.3s linear;
     transition: 0.3s linear;
 }
 
 .test-item .content .title h4 a:hover {
-    color: #ff5e14;
+    color: var(--clrMain);
 }
 
 .test-item .content .title span {
     font-family: "Roboto";
     font-size: 15px;
-    color: #ff5e14;
+    color: var(--clrMain);
     font-weight: 500;
 }
