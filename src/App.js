@@ -8,6 +8,7 @@ import Products from './pages/Products'
 import MyProfile from './pages/MyProfile'
 import Layout from './components/Layout'
 import ProductContainer from './components/Product/ProductContainer'
+import Purchase from './pages/Purchase'
 
 
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/purchase/:id" element={<Purchase />} />
           <Route path="/products" element={<Products />} >
             <Route path="/products/" element={<ProductContainer />} />
             <Route path="/products/:feature" element={<ProductContainer />} />

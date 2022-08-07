@@ -195,6 +195,9 @@ const products = [
 
 ]
 
+export const getProduct = (id)=>{
+    return products.filter(product => product.id === id)[0]
+}
 
 export default (feature = null, category = null) => {
     console.log(feature, category)

@@ -1,0 +1,12 @@
+.purchase-container p{
+    padding: 0;
+    margin: 6px 0 0 0;
+    color: var(--clrPrimary)
+}
+.value {
+    color: var(--clrMain)
+}
+.row {
+    align-items: center;
+}
+
