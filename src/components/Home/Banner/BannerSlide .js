@@ -11,7 +11,7 @@ const BannerSlide = ({ banner }) => {
                     <h1>{banner.title}</h1>
                     <p>{banner.description}</p>
                     <div className="banner-btn">
-                        <Link to="/products/all" className="gs-btn gs-btn-primary">Explore Now</Link>
+                        <Link to="/products" className="gs-btn gs-btn-primary">Explore Now</Link>
                         <div className="video-btn">
 
                             <div className="fancy-box">

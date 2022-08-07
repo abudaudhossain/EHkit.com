@@ -12,5 +12,5 @@ export const setDataLocalDB = (data) => {
 
 export const getDataLocalDB = () => {
     const data = localStorage.getItem("myOrder");
-    return JSON.parse(data)
+    return JSON.parse(data) 
 }

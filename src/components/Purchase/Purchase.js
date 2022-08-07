@@ -33,7 +33,7 @@ const Purchase = () => {
     return (
         <>
             <section className="container">
-                <Row >
+                <Row className="purchase-row" >
                     <Col sm={12} md={6}>
                         <div className="img-container p-2">
                             <MyImgMagnifier img={image} />

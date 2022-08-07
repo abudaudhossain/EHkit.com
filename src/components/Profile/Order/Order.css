@@ -1,0 +1,11 @@
+.order-card{
+   display: flex
+}
+
+.img-container {
+    width: 300px;
+    height: 200px;
+}
+.img-container .img-thumbnail{
+    height: 100%;
+}

@@ -25,10 +25,10 @@ function Banner() {
                     pagination={{
                         clickable: true,
                     }}
-                    // autoplay={{
-                    //     delay: 2500,
-                    //     disableOnInteraction: false,
-                    // }}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
                     modules={[Autoplay, EffectCreative, Pagination]}
 
                     loop={true}

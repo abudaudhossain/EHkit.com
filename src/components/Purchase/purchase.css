@@ -6,7 +6,7 @@
 .value {
     color: var(--clrMain)
 }
-.row {
+.purchase-row.row {
     align-items: center;
 }
 
