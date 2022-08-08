@@ -10,7 +10,9 @@ const Orders = () => {
     useEffect(() => {
         setOrders(getDataLocalDB())
     }, [getDataLocalDB()])
-
+    if(!orders){
+        return <h3 className='text-center m-5'>Oder unAvailable</h3>
+    }
     return (
         <section>
             <Container>
