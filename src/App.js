@@ -19,6 +19,8 @@ import AddCategory from './components/DashBoard/Category/AddCategory';
 import CategoryList from './components/DashBoard/Category/CategoryList';
 import OrderList from './components/DashBoard/Order/OrderList';
 import UserList from './components/DashBoard/User/UserList';
+import Login from './pages/Login'
+import Signup from './pages/Signup'
 
 
 
@@ -28,18 +30,7 @@ function App() {
       <Layout >
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/dashboard" element={<DashBoard />} >
-              <Route path='/dashboard' element={<Dashboard />} />
-              <Route path='/dashboard/productList' element={<ProductList />} />
-              <Route path='/dashboard/productAdd' element={<AddProduct />} />
-              <Route path='/dashboard/productUpdate/:id' element={<ProductUpdate />} />
-              <Route path='/dashboard/productDetails/:id' element={<ProductDetails />} />
-              <Route path='/dashboard/newCategory' element={<AddCategory />} />
-              <Route path='/dashboard/categoryList' element={<CategoryList />} />
-              <Route path='/dashboard/orderList' element={<OrderList />} />
-              <Route path='/dashboard/user' element={<UserList />} />
-              {/* <Route path='/dashboard/' element={<ProductUpdate />} /> */}
-          </Route>
+
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/purchase/:id" element={<Purchase />} />
@@ -47,6 +38,20 @@ function App() {
             <Route path="/products/" element={<ProductContainer />} />
             <Route path="/products/:feature" element={<ProductContainer />} />
             <Route path="/products/:feature/:category" element={<ProductContainer />} />
+          </Route>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/dashboard" element={<DashBoard />} >
+            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/dashboard/productList' element={<ProductList />} />
+            <Route path='/dashboard/productAdd' element={<AddProduct />} />
+            <Route path='/dashboard/productUpdate/:id' element={<ProductUpdate />} />
+            <Route path='/dashboard/productDetails/:id' element={<ProductDetails />} />
+            <Route path='/dashboard/newCategory' element={<AddCategory />} />
+            <Route path='/dashboard/categoryList' element={<CategoryList />} />
+            <Route path='/dashboard/orderList' element={<OrderList />} />
+            <Route path='/dashboard/user' element={<UserList />} />
+            {/* <Route path='/dashboard/' element={<ProductUpdate />} /> */}
           </Route>
           <Route path="/myProfile" element={<MyProfile />} />
         </Routes>
