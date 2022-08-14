@@ -21,7 +21,7 @@ const useFirebase = () => {
                 userAccount.email = result.user.email;
                 userAccount.rule = "user";
 
-                axios.post('http://localhost:5000/createAccount', userAccount)
+                axios.post('https://ehkit.herokuapp.com/createAccount', userAccount)
                     .then(function (response) {
                         const result = response.data;
                         setUserInfo(result.data.user) // set to local storage
@@ -59,7 +59,7 @@ const useFirebase = () => {
                 console.log(user, "after firebase sing in")
                 // ...
                 userInfo.rule = 'user';
-                axios.post('http://localhost:5000/createAccount', userInfo)
+                axios.post('https://ehkit.herokuapp.com/createAccount', userInfo)
                     .then(function (response) {
                         const result = response.data;
                         setUserInfo(result.data.user) // set to local storage
@@ -83,7 +83,7 @@ const useFirebase = () => {
     const loginWithEmailAndPassword = ({ email, password }) => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                axios.post('http://localhost:5000/login', { email })
+                axios.post('https://ehkit.herokuapp.com/login', { email })
                     .then(function (response) {
                         const result = response.data;
                         setUserInfo(result.data.user) // set to local storage
