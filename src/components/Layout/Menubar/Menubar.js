@@ -41,11 +41,17 @@ const Menubar = () => {
                         <Link to="/products">Products</Link>
                         <Link to="/about">About</Link>
                         <Link to="/contact">Contact</Link>
-                        <Link to="/myProfile">My Profile</Link>
-
 
                         {
-                            userData?.email ? <span onClick={() => logout()} className="gs-btn gs-btn-primary login-btn">Log Out</span>
+                            userData?.rule === 'admin' && <Link to="/dashboard">Dashboard</Link>
+                        }
+                        {
+                            userData?.email ? (
+                                <>
+                                    <Link to="/myProfile">My Profile</Link>
+                                    <span onClick={() => logout()} className="gs-btn gs-btn-primary login-btn">Log Out</span>
+                                </>
+                            )
                                 : <Link to="/login" className="gs-btn gs-btn-primary login-btn">Login</Link>
                         }
                     </Nav>

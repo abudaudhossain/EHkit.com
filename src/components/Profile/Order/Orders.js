@@ -9,8 +9,8 @@ const Orders = () => {
 
     useEffect(() => {
         setOrders(getDataLocalDB("myOrder"))
-    }, [getDataLocalDB("myOrder")])
-    if(!orders){
+    }, [])
+    if (!orders) {
         return <h3 className='text-center m-5'>Oder unAvailable</h3>
     }
     return (

@@ -8,14 +8,11 @@ import useFirebase from '../../hooks/useFirebase';
 
 
 const Index = () => {
-  const { userData } = useFirebase()
+  const { userData, createAccountWithPasswordBased } = useFirebase()
   let navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => {
-
-
-    alert("Your Order Is successful")
-    //   navigate("/myProfile", { replace: true })
+    createAccountWithPasswordBased(data)
     console.log(data)
   };
 

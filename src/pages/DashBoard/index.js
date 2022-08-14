@@ -1,10 +1,14 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Outlet, Link } from 'react-router-dom'
+import { Outlet, Link, Navigate } from 'react-router-dom'
+import useFirebase from '../../hooks/useFirebase'
 
 const Index = () => {
-  return (
-    <Container>
+  const { userData } = useFirebase()
+  console.log(userData, "dashboard")
+
+  if (userData?.rule) {
+    return (userData?.rule === 'admin' ? (<Container>
       <Row>
         <Col sm={4} lg={3} xl={2}>
           <nav className="h-100 flex-column align-items-stretch pe-4 border-end">
@@ -28,7 +32,10 @@ const Index = () => {
         </Col>
       </Row>
     </Container>
-  )
+    ) : (<Navigate to="/login" />))
+  } else {
+    return <h5 className="text-center p-5">loading...</h5>
+  }
 }
 
 export default Index

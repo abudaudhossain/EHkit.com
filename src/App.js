@@ -21,6 +21,7 @@ import OrderList from './components/DashBoard/Order/OrderList';
 import UserList from './components/DashBoard/User/UserList';
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 
 
@@ -33,7 +34,10 @@ function App() {
 
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/purchase/:id" element={<Purchase />} />
+          <Route path="/" element={<PrivateRoute />}>
+            <Route path="/myProfile" element={<MyProfile />} />
+            <Route path="/purchase/:id" element={<Purchase />} />
+          </Route>
           <Route path="/products" element={<Products />} >
             <Route path="/products/" element={<ProductContainer />} />
             <Route path="/products/:feature" element={<ProductContainer />} />
@@ -53,7 +57,7 @@ function App() {
             <Route path='/dashboard/user' element={<UserList />} />
             {/* <Route path='/dashboard/' element={<ProductUpdate />} /> */}
           </Route>
-          <Route path="/myProfile" element={<MyProfile />} />
+
         </Routes>
       </Layout>
     </BrowserRouter>

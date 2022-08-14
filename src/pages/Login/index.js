@@ -10,10 +10,11 @@ import useFirebase from '../../hooks/useFirebase';
 
 const Index = () => {
     let navigate = useNavigate();
-    const { userData } = useFirebase();
+    const { userData, loginWithEmailAndPassword } = useFirebase();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-
+        loginWithEmailAndPassword(data)
+        navigate(-1)
         console.log(data)
     };
 

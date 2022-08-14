@@ -4,7 +4,7 @@ import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
 const Map = () => {
     const position = [23.815962524317232, 90.41976403417358]
     return (
-        <di >
+        <div >
             <MapContainer center={position} zoom={13} scrollWheelZoom={false} className="map">
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -33,7 +33,7 @@ const Map = () => {
                     </Popup>
                 </Marker>
             </MapContainer>
-        </di>
+        </div>
     )
 }
 

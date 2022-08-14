@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { useEffect, useState } from "react";
 import firebaseInitialize from "../firebase/firebase.initialize";
 import { getDataLocalDB, getRemoveItemLocalDB, setUserInfo } from "./localDB";
@@ -12,7 +12,7 @@ const useFirebase = () => {
     const auth = getAuth(firebaseInitialize());
     const googleProvider = new GoogleAuthProvider();
 
-
+    // google sing in
     const googleSingIn = () => {
         signInWithPopup(auth, googleProvider)
             .then((result) => {
@@ -26,6 +26,7 @@ const useFirebase = () => {
                         const result = response.data;
                         setUserInfo(result.data.user) // set to local storage
                         window.location.reload(false);
+
                     })
                     .catch(function (error) {
                         const result = error.response.data
@@ -48,6 +49,60 @@ const useFirebase = () => {
 
     }, []);
 
+    // Create a password-based account
+    const createAccountWithPasswordBased = (userInfo) => {
+        const { email, password } = userInfo;
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                console.log(user, "after firebase sing in")
+                // ...
+                userInfo.rule = 'user';
+                axios.post('http://localhost:5000/createAccount', userInfo)
+                    .then(function (response) {
+                        const result = response.data;
+                        setUserInfo(result.data.user) // set to local storage
+                        window.location.reload(false);
+
+
+                    })
+                    .catch(function (error) {
+                        const result = error.response.data
+                        const status = error.response.status
+                        console.log(result, 'result');
+                        console.log(status, "status");
+                    });
+            })
+            .catch((error) => {
+                console.log(error)
+            });
+
+    }
+
+    const loginWithEmailAndPassword = ({ email, password }) => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                axios.post('http://localhost:5000/login', { email })
+                    .then(function (response) {
+                        const result = response.data;
+                        setUserInfo(result.data.user) // set to local storage
+                        window.location.reload(false);
+
+
+                    })
+                    .catch(function (error) {
+                        const result = error.response.data
+                        const status = error.response.status
+                        console.log(result, 'result');
+                        console.log(status, "status");
+                    });
+            })
+            .catch((error) => {
+                console.log(error)
+            });
+    }
+
     const logout = () => {
         signOut(auth).then(() => {
             getRemoveItemLocalDB("user");
@@ -56,11 +111,13 @@ const useFirebase = () => {
             console.log(error, "logout")
         });
     }
-
+   
     return {
         googleSingIn,
         userData,
-        logout
+        logout,
+        createAccountWithPasswordBased,
+        loginWithEmailAndPassword
     }
 }
 
