@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { useForm } from "react-hook-form";
 import { setDataLocalDB } from '../../hooks/localDB';
 import { useNavigate, Link } from "react-router-dom";
+import MediaAuth from '../../components/shared/Auth/MediaAuth';
+import useFirebase from '../../hooks/useFirebase';
 
 
 const Index = () => {
+  const { userData } = useFirebase()
   let navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => {
@@ -16,6 +19,11 @@ const Index = () => {
     console.log(data)
   };
 
+  useEffect(() => {
+    if (userData?.email) {
+      navigate(-1)
+    }
+  }, [userData])
   return (
     <section>
       <Container className="Form-container">
@@ -49,15 +57,10 @@ const Index = () => {
 
 
           <p className="my-4 text-center">Or Login with others</p>
-          <div className="footer-social-icon text-center">
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-google-plus-g"></i></a>
-            <a href="#"><i className="fab fa-linkedin-in"></i></a>
-          </div>
+          <MediaAuth />
 
           <div>
-            <p>Have an account?<Link to="/login" class="switcher-text2 inline-text">Login</Link></p>
+            <p>Have an account?<Link to="/login" className="switcher-text2 inline-text">Login</Link></p>
           </div>
         </div>
       </Container>

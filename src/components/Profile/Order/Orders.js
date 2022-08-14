@@ -5,11 +5,11 @@ import { getDataLocalDB } from '../../../hooks/localDB'
 
 
 const Orders = () => {
-    const [orders, setOrders] = useState(getDataLocalDB());
+    const [orders, setOrders] = useState(getDataLocalDB("myOrder"));
 
     useEffect(() => {
-        setOrders(getDataLocalDB())
-    }, [getDataLocalDB()])
+        setOrders(getDataLocalDB("myOrder"))
+    }, [getDataLocalDB("myOrder")])
     if(!orders){
         return <h3 className='text-center m-5'>Oder unAvailable</h3>
     }

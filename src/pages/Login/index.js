@@ -1,26 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { useForm } from "react-hook-form";
 import { setDataLocalDB } from '../../hooks/localDB';
 import { Link, useNavigate } from "react-router-dom";
 
 import './login.css'
+import MediaAuth from '../../components/shared/Auth/MediaAuth';
+import useFirebase from '../../hooks/useFirebase';
 
 const Index = () => {
     let navigate = useNavigate();
+    const { userData } = useFirebase();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
 
-
-        alert("Your Order Is successful")
-        //   navigate("/myProfile", { replace: true })
         console.log(data)
     };
+
+    useEffect(() => {
+        if (userData?.email) {
+            navigate(-1)
+        }
+    }, [userData])
 
     return (
         <section>
             <Container className="Form-container">
-                <h2 className="text-center mb-4">Log In Now</h2>
+                <h2 className="text-center mb-4">Log In Now </h2>
                 <div className="footer-widget">
                     <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -35,24 +41,19 @@ const Index = () => {
                         </div>
 
                         <div className='d-flex justify-content-between'>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                                <label class="form-check-label" for="exampleCheck1">Keep me logged in</label>
+                            <div className="form-check">
+                                <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                                <label className="form-check-label" htmlFor="exampleCheck1">Keep me logged in</label>
                             </div>
                             <Link to="/forgetPassword" >Forget password</Link>
                         </div>
                         <input className='gs-btn gs-btn-primary' type="submit" value="Login" />
                     </form>
                     <p className="my-4 text-center">Or Login with others</p>
-                    <div className="footer-social-icon text-center">
-                        <a href="#"><i className="fab fa-facebook-f"></i></a>
-                        <a href="#"><i className="fab fa-twitter"></i></a>
-                        <a href="#"><i className="fab fa-google-plus-g"></i></a>
-                        <a href="#"><i className="fab fa-linkedin-in"></i></a>
-                    </div>
+                    <MediaAuth />
 
                     <div>
-                        <p>Don't have an account?<Link to="/signup" class="switcher-text2 inline-text">Register</Link></p>
+                        <p>Don't have an account?<Link to="/signup" className="switcher-text2 inline-text">Register</Link></p>
                     </div>
                 </div>
             </Container>

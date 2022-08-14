@@ -2,7 +2,9 @@ import React from 'react'
 import { useForm } from "react-hook-form";
 
 import { useNavigate } from "react-router-dom";
-const key = "de96881a1578dbb13ec03b5abd341e47";
+
+
+
 const AddProduct = () => {
   let navigate = useNavigate();
   const { register, handleSubmit, } = useForm();
@@ -12,7 +14,7 @@ const AddProduct = () => {
     const image = data.image[0];
     const formData = new FormData();
     formData.append("image", image, image.name)
-    const url = `https://api.imgbb.com/1/upload?key=${key}`;
+    const url = `https://api.imgbb.com/1/upload?key=${process.env.REACT_APP_KEY}`;
     fetch(url, {
       method: 'POST',
       body: formData

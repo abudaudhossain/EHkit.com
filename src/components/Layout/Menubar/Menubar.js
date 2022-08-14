@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./menubar.css"
 import logo from "../../../assets/images/logo/logo.png"
 
@@ -11,8 +11,17 @@ import {
     Button
 } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import useFirebase from '../../../hooks/useFirebase'
+import { getDataLocalDB } from '../../../hooks/localDB'
 
 const Menubar = () => {
+
+    const { userData, logout } = useFirebase();
+
+    console.log(userData, "userData")
+
+
+
     return (
         <Navbar expand="lg" className="navbar">
             <Container >
@@ -34,9 +43,11 @@ const Menubar = () => {
                         <Link to="/contact">Contact</Link>
                         <Link to="/myProfile">My Profile</Link>
 
-                        {/* <Button className='bg-btn m-2 pt-10 pb-10' >Booking Now</Button> */}
-                       
 
+                        {
+                            userData?.email ? <span onClick={() => logout()} className="gs-btn gs-btn-primary login-btn">Log Out</span>
+                                : <Link to="/login" className="gs-btn gs-btn-primary login-btn">Login</Link>
+                        }
                     </Nav>
 
                 </Navbar.Collapse>

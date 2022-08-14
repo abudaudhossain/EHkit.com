@@ -44,7 +44,7 @@
 
 .footer-widget .footer-social-icon a {
     background: var(--clrMain);
-    color: var(--clrdefault);
+    color: var(--clrdefault) !important;
     font-size: 14px;
     margin-right: 5px;
     height: 35px;

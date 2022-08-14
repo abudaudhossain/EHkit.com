@@ -26,6 +26,22 @@
     color: var(--clrMain) !important;
 }
 
+a.login-btn {
+    padding: 4px 12px;
+}
+
+.login-btn {
+    padding: 4px 12px;
+}
+
+.login-btn:hover {
+    color: var(--clrdefault);
+}
+
+a.login-btn:hover {
+    color: var(--clrdefault) !important;
+}
+
 .dropdown-menu.show {
     width: 250px;
     left: -154px;
