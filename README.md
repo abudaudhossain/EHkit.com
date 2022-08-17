@@ -5,22 +5,48 @@
 
 
 ### description
+Ehkit.com website has daily household products. Such as furniture, kitchenware, automobile parts, and building materials. Users can order their daily required products. This website has user authorization. There are two types of users like normal users and admins. Normal users can order any product by logging into the website. After the admin controls the website. Admin website after viewing any product add update delete end. All users can add an order list, delete, or change status.
 
 ### Features
 
-- Support with bootstrap 5
+- Dynamic Slider Banner
+- Firebase AuthenticaTion
+- Custom User Profile
+- Product Query By Furniture and Category
+- Purchase Page
 - Fully Responsive
 - Clean Code
-- Demo Pages
-- Color Mode
-- Direction Mode
-- Layout Setting
-- 30+ Menu Styles
+- User friendly UI.
+- Nice Admin Dashboard.
 
 <!-- 
 <a href="https://www.youtube.com/watch?v=3OMj6nqDuAA" title="Hope UI" target="__blank">
   <img src="https://assets.iqonic.design/hope-ui/github/hope-ui-youtube.png" alt="Hope UI Video" />
 </a> -->
+## Tech Stack
+
+**Front-End:** 
+- React.js
+- Context API
+
+**CSS-Framework:** 
+- Bootstrap CSS.
+- React-Bootstrap
+
+**Back-End:** 
+- Node.js
+- Express
+
+**Database:** 
+- MongoDB
+- Mongoose.
+**NPM Package:**
+- swiper
+- react-player
+- leaflet
+- axios
+- react-image-magnifiers
+- react-hook-form
 
 # Table of Contents
 
@@ -42,14 +68,13 @@
 
 ## Quick Start
 
-You can use following method to get started with CSS and JS files of the design system.
+You can use following method to get started with React Application of the EHKit system.
 
-### Method 1: Direct Download
-[Dowload from Github](https://github.com/iqonicdesignofficial/hope-ui-react-dashboard/archive/refs/heads/main.zip)
+### Part 1: Direct Download
+[Dowload from Github](https://github.com/abudaudhossain/EHkit.com/archive/refs/heads/main.zip)
 
-[Download from Iqonic Design](https://iqonic.design/product/admin-templates/hope-ui-admin-free-open-source-bootstrap-admin-template/?utm_source=github&utm_medium=github-description&utm_campaign=open_source_github)
-### Method 2: Using NPM
-Start working with the design system
+### Part 2: Using NPM
+Start working with the EHKit system
 1. Install Dependency
 ```
 npm install
@@ -63,19 +88,7 @@ npm start
 ```
 npm run build
 ```
-[More Details...](https://templates.iqonic.design/hope-ui/documentation/html/dist/main/gulp.html)
-## Documentation
-You can find our documentation [here](https://templates.iqonic.design/hope-ui/documentation/html/dist/main/).
 
-## Version
-- [Figma](https://www.figma.com/community/file/1009728454881721702)
-- [HTML Admin Dashboard](https://iqonic.design/product/admin-templates/hope-ui-admin-free-open-source-bootstrap-admin-template/?utm_source=github&utm_medium=github-description&utm_campaign=open_source_github)
-- [Vue JS Dashobard](https://iqonic.design/product/admin-templates/hope-ui-open-source-vue-js-admin-template/?utm_source=github&utm_medium=github-description&utm_campaign=open_source_github)
-- [React JS Dashobard](https://iqonic.design/product/admin-templates/hope-ui-free-open-source-react-admin-template/?utm_source=github&utm_medium=github-description&utm_campaign=open_source_github)
-- [Laravel Dashobard](https://iqonic.design/product/admin-templates/hope-ui-free-open-source-laravel-admin-panel/?utm_source=github&utm_medium=github-description&utm_campaign=open_source_github)
-
-## Public RoadMap
-Checkout our public roadmap of Hope UI and also submit features requests [here](https://iqonic.design/hopeui-roadmap/).
 ## File Structure
 Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
 ```
@@ -84,120 +97,87 @@ github/hope-ui-admin-dashboard/
 src
   ├── assets
   │    ├── images
-  │    │    ├── icon.png
-  │    │    ├── favicon.ico
+  │    │    ├── 404
+  │    │    │    └── 1.png
+  │    │    ├── footer
+  │    │    │    ├── 1.png
+  │    │    │    ├── footer-bg.png
+  │    │    │    └── map-1.png
+  │    │    ├── team
+  │    │    │    ├── team-1.jpg
+  │    │    │    ├── team-2.jpg
+  │    │    │    └── team-3.jpg
+  │    │    ├── testimonial
+  │    │    │    ├── 1.jpg
+  │    │    │    ├── 2.jpg
+  │    │    │    ├── 3.jpg
+  │    │    │    ├── map-bg.jpg
+  │    │    │    ├── testimonial-1.jpg
+  │    │    │    └── testimonial-3.jpg
   │    │    └── loader.gif
-  │    |── scss
-  │    |    ├── bootstrap/
-  │    |    │     ├── forms/
-  │    |    │     ├── helper/
-  │    |    │     ├── mixins/
-  │    |    │     ├── utilites/
-  │    |    │     └── vendor/
-  │    |    ├── custom
-  │    |    │     ├── auth/
-  │    |    │     ├── kanban/
-  │    |    │     ├── pricing/
-  │    |    │     └── ui-kit/
-  |    |    ├──customizer
-  │    |    │     ├── components/
-  │    |    │     ├── layouts/
-  │    |    │     ├── menu-style/
-  │    |    │     ├── utilities/
-  │    |    │     ├── components.scss
-  │    |    │     ├── dark.scss
-  │    |    │     ├── layout.scss
-  │    |    │     └── variables.scss   
-  │    |    ├── hope-ui-design-system
-  │    |    │     ├── components/
-  │    |    │     ├── helper/
-  │    |    │     ├── layout-style/
-  │    |    │     ├── pages/
-  │    |    │     ├── plugins/
-  │    |    │     ├── variables/
-  │    |    │     └── variables.scss
-  │    |    ├── dark
-  │    |    │     ├── components/
-  │    |    │     ├── helper/
-  │    |    │     ├── layout-style/
-  │    |    │     ├── pages/
-  │    |    │     ├── plugins/
-  │    |    │     ├── reboot/
-  │    |    │     ├── _dark.scss
-  │    |    │     └── _index.scss
-  │    |    ├── rtl
-  │    |    │     ├── components/
-  │    |    │     ├── pages/
-  │    |    │     ├── reboot/
-  │    |    │     ├── utilities/
-  │    |    │     └── _index.scss
-  │    |    ├── rtl.scss
-  │    |    ├── dark.scss
-  │    |    ├── customizer.scss
-  │    |    ├── custom.scss
-  │    |    └── hope-ui.scss
-  |    |
-  |    └──sortable/
-  │         └── Plugins Files
-  │  
-  │ 
   ├── components
-  |    ├── partials
-  |    |    ├──components
-  │    |    |   ├── header-breadcrumb
-  │    |    |   ├── logo
-  │    |    |   ├── mobile-offcanvas
-  │    |    |   ├── settingoffcanvas
-  │    |    |   └── shareoffcanvas
-  │    |    └──dashboard
-  │    |        ├── FooterStyle/
-  │    |        ├── HeaderStyle/
-  │    |        └── SidebarStyle/
-  │    ├── Card
-  │    ├── circularprogressbar
-  │    ├── counterup
-  │    ├── datepicker
-  │    ├── dropdown
-  │    ├── leaflet
-  │    ├── loader
-  │    └── progress
-  ├── layouts/dashboard
-  |    ├── boxed-fancy
-  |    ├── boxed
-  |    ├── default
-  |    ├── dual-Compact
-  |    ├── dual-horizontally
-  |    ├── horizontal
-  |    └── simple 
-  ├── plugins
-  |    └──slider-tabs
-  ├── router
-  |    ├── boxed-fancy-router
-  |    ├── boxed-router
-  |    ├── defult-router 
-  |    ├── horizontal-multi-2
-  |    ├── horizontal-router
-  |    ├── simple-router 
-  |    └── index
-  ├── store
-  |    ├── setting
-  |    |    └── setting
-  |    └──index
-  ├── views
-  |    ├── dashboard/
-  |    └── uikit/
+  |    ├── about
+  |    |    ├── Banner
+  │    |    |   ├── banner.css
+  │    |    |   ├── Banner.js
+  │    |    |   ├── Details.css
+  │    |    |   └── Details.js
+  │    |    └── About.js
+  │    ├── ContactUs
+  |    |    ├── ContactInfo
+  │    |    |   ├── contactInfo.css
+  │    |    |   └── index.js
+  |    |    ├── Contact.js
+  |    |    ├── ContactFrom.js
+  │    |    └── Map.js
+  │    ├── DashBoard
+  |    |    ├── Category
+  │    |    |   ├── AddCategory.js
+  │    |    |   └── CategoryList.js
+  |    |    ├── Order
+  │    |    |   └── OrderList.js
+  |    |    ├── Product
+  │    |    |   ├── AddProduct.js
+  │    |    |   ├── product.css
+  │    |    |   ├── ProductDetails.js
+  │    |    |   ├── ProductList.js
+  │    |    |   └── ProductUpdate.js
+  |    |    ├── User
+  │    |    |   └── userList.js
+  │    |    └── Dashboard.js
+  │    ├── Feature
+  │    |    |   ├── feature.css
+  │    |    |   └── index.js
+  │    ├── Home 
+  │    ├── Layout
+  │    ├── packageDetails
+  │    ├── PrivateRoute
+  │    ├── Product
+  │    ├── Profile
+  │    ├── Purchase
+  │    └── shared
+  ├── context
+  ├── data
+  ├── firebase
+  ├── hooks
+  ├── pages
+  ├── routes
+  ├── utils
+  ├── App.css
   ├── App.js
   ├── App.test.js
+  ├── index.css
   ├── index.js
+  ├── logo.svg
   ├── reportWebVitals.js
   ├── setupTests.js
-  ├── .env.development.local
-  ├── .env.production.local
+  ├── .env.local
   ├── .gitignore
-  ├── .htaccess
   ├── package-lock.json
   ├── package.json
-  └── README.md
+  ├── README.md
+  ├── yarn-error.log
+  └── yarn.lock
 ```
 ## Browser Support
 ![chrome](https://assets.iqonic.design/hope-ui/github/chrome.png)
@@ -206,34 +186,11 @@ src
 ![Microsoft](https://assets.iqonic.design/hope-ui/github/Microsoft%20edge.png)
 ![Operamini](https://assets.iqonic.design/hope-ui/github/Operamini.png)
 
-## Don't Buy a Coffee for Us Instead Support Us
-- Star our GitHub repo ⭐
-- Follow [@iqonicdesign](https://twitter.com/iqonicdesign) on Twitter.
-- Follow Us on [Instagram](https://www.instagram.com/iqonicdesign/)
-
-
-## More from Iqonic Design
-- [Free Products Every Week](https://iqonic.design/?utm_source=github&utm_medium=github-description&utm_campaign=open_source_github)
-- [Premium Themes, templates, dashbaords, Apps, and more](https://iqonic.design/shop/?iqonic=1&orderby=sales&paged=1&product_for=premium)
-- [Subscribe on Youtube](https://www.youtube.com/c/IqonicDesign)
-- [Reach US](https://iqonic.design/contact-us/)
-<!-- ## Reporting Issues
-Have a bug or a feature request? Raise a new issue at our [github](https://github.com/iqonicdesignofficial/hope-ui-design-system/issues) support -->
-
-## Special Thanks
-- [Bootstrap](https://getbootstrap.com/)
-- [Google Fonts](https://www.google.com/fonts)
-- [Jquery](https://jquery.com/)
-- [Apex Charts](https://apexcharts.com/)
-
-
-<!-- ## Change Log
-[Click Here](https://templates.iqonic.design/hope-ui/documentation/html/dist/main/change-log.html) to check our full change log. -->
 ## Follow Us
-- [Twitter](https://twitter.com/iqonicdesign)
-- [Facebook](https://www.facebook.com/iqonicdesign/)
-- [Dribbble](https://dribbble.com/IqonicDesign)
-- [Instagram](https://www.instagram.com/iqonicdesign/)
-- [Product Hunt](https://www.producthunt.com/posts/iqonic-design)
+- [Twitter](https://twitter.com/webexpert24abu)
+- [Facebook](https://www.facebook.com/abudaud.dev/)
+- [LinkedIn](https://www.linkedin.com/in/abudauddev/)
+- [Instagram](https://www.instagram.com/abudauddev/)
+
 ## Licensing
-- Code and Documentation Copyright 2021 All Rights Reserved by [IQONIC](https://iqonic.design/?utm_source=github&utm_medium=github-description&utm_campaign=open_source_github) Design. Code released under the [MIT](https://iqonic.design/licenses/) License.
+- Code and Documentation Copyright 2021 All Rights Reserved by [Abu Daud Hossain](https://github.com/abudaudhossain) Development.
