@@ -4,7 +4,7 @@
 </a>
 
 
-### description
+### Description
 Ehkit.com website has daily household products. Such as furniture, kitchenware, automobile parts, and building materials. Users can order their daily required products. This website has user authorization. There are two types of users like normal users and admins. Normal users can order any product by logging into the website. After the admin controls the website. Admin website after viewing any product add update delete end. All users can add an order list, delete, or change status.
 
 ### Features
@@ -193,4 +193,4 @@ src
 - [Instagram](https://www.instagram.com/abudauddev/)
 
 ## Licensing
-- Code and Documentation Copyright 2021 All Rights Reserved by [Abu Daud Hossain](https://github.com/abudaudhossain) Development.
+- Code and Documentation Copyright 2022 All Rights Reserved by [Abu Daud Hossain](https://github.com/abudaudhossain) Development.
