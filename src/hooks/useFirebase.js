@@ -3,8 +3,10 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signO
 import { useEffect, useState } from "react";
 import firebaseInitialize from "../firebase/firebase.initialize";
 import { getDataLocalDB, getRemoveItemLocalDB, setUserInfo } from "./localDB";
+import baseUrl from "./baseUrl";
 
-
+// const baseUrl = 'https://ehkit.herokuapp.com'
+// const baseUrl = 'http://localhost:5000'
 
 
 const useFirebase = () => {
@@ -21,7 +23,7 @@ const useFirebase = () => {
                 userAccount.email = result.user.email;
                 userAccount.rule = "user";
 
-                axios.post('https://ehkit.herokuapp.com/createAccount', userAccount)
+                axios.post(`${baseUrl}/createAccount`, userAccount)
                     .then(function (response) {
                         const result = response.data;
                         setUserInfo(result.data.user) // set to local storage
@@ -59,7 +61,7 @@ const useFirebase = () => {
                 console.log(user, "after firebase sing in")
                 // ...
                 userInfo.rule = 'user';
-                axios.post('https://ehkit.herokuapp.com/createAccount', userInfo)
+                axios.post(`${baseUrl}/createAccount`, userInfo)
                     .then(function (response) {
                         const result = response.data;
                         setUserInfo(result.data.user) // set to local storage
@@ -83,7 +85,7 @@ const useFirebase = () => {
     const loginWithEmailAndPassword = ({ email, password }) => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                axios.post('https://ehkit.herokuapp.com/login', { email })
+                axios.post(`${baseUrl}/login`, { email })
                     .then(function (response) {
                         const result = response.data;
                         setUserInfo(result.data.user) // set to local storage
@@ -111,7 +113,7 @@ const useFirebase = () => {
             console.log(error, "logout")
         });
     }
-   
+
     return {
         googleSingIn,
         userData,

@@ -22,6 +22,7 @@ import UserList from './components/DashBoard/User/UserList';
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import ProfileUpdate from './pages/ProfileUpdate';
 
 
 
@@ -36,6 +37,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/" element={<PrivateRoute />}>
             <Route path="/myProfile" element={<MyProfile />} />
+            <Route path="/profile/update" element={<ProfileUpdate />} />
             <Route path="/purchase/:id" element={<Purchase />} />
           </Route>
           <Route path="/products" element={<Products />} >

@@ -1,6 +1,6 @@
 # EHkit.com
 <a href="https://ehkit.netlify.app/" target="__blank" title="EHKit.com">
-  <img src="https://i.ibb.co/NsQFrbb/screencapture-ehkit-netlify-app-2022-08-08-00-51-53.png" alt="EHkit.com home page" />
+  <img src="https://i.ibb.co/2F9fVHJ/EHkit.png" alt="EHkit.com home page" />
 </a>
 
 
@@ -208,29 +208,27 @@ src
 
 ## Don't Buy a Coffee for Us Instead Support Us
 - Star our GitHub repo ⭐
-- [Tweet about it](https://twitter.com/intent/tweet?text=Checkout%20%23HopeUI%20%E2%80%93%20Amazing%20open-source%20Bootstrap%205%20Admin%20Dashboard%20%26%20Design%20system.%20%23BuildwithHopeUI&url=https%3A%2F%2Fbit.ly%2F3ANB7gT).
-- Submit bugs, or suggest new features and documentation updates 🔧
 - Follow [@iqonicdesign](https://twitter.com/iqonicdesign) on Twitter.
 - Follow Us on [Instagram](https://www.instagram.com/iqonicdesign/)
-- Subscribe to Iqonic newsletter at [iqonic.design](https://iqonic.design)
+
 
 ## More from Iqonic Design
 - [Free Products Every Week](https://iqonic.design/?utm_source=github&utm_medium=github-description&utm_campaign=open_source_github)
 - [Premium Themes, templates, dashbaords, Apps, and more](https://iqonic.design/shop/?iqonic=1&orderby=sales&paged=1&product_for=premium)
 - [Subscribe on Youtube](https://www.youtube.com/c/IqonicDesign)
 - [Reach US](https://iqonic.design/contact-us/)
-## Reporting Issues
-Have a bug or a feature request? Raise a new issue at our [github](https://github.com/iqonicdesignofficial/hope-ui-design-system/issues) support
+<!-- ## Reporting Issues
+Have a bug or a feature request? Raise a new issue at our [github](https://github.com/iqonicdesignofficial/hope-ui-design-system/issues) support -->
 
 ## Special Thanks
 - [Bootstrap](https://getbootstrap.com/)
 - [Google Fonts](https://www.google.com/fonts)
 - [Jquery](https://jquery.com/)
 - [Apex Charts](https://apexcharts.com/)
-[Checkout complete list](https://templates.iqonic.design/hope-ui/documentation/html/dist/main/sourceAndCredit.html)
 
-## Change Log
-[Click Here](https://templates.iqonic.design/hope-ui/documentation/html/dist/main/change-log.html) to check our full change log.
+
+<!-- ## Change Log
+[Click Here](https://templates.iqonic.design/hope-ui/documentation/html/dist/main/change-log.html) to check our full change log. -->
 ## Follow Us
 - [Twitter](https://twitter.com/iqonicdesign)
 - [Facebook](https://www.facebook.com/iqonicdesign/)
