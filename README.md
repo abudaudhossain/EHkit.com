@@ -28,6 +28,8 @@ Ehkit.com website has daily household products. Such as furniture, kitchenware, 
 **Front-End:** 
 - React.js
 - Context API
+- react-router-dom
+- Firebase
 
 **CSS-Framework:** 
 - Bootstrap CSS.
@@ -51,18 +53,8 @@ Ehkit.com website has daily household products. Such as furniture, kitchenware, 
 # Table of Contents
 
   - [Quick Start](#quick-start)
-    - [Method 1: Direct Download](#method-1-direct-download)
-    - [Method 2: Using NPM](#method-2-using-npm)
-  - [Documentation](#documentation)
-  - [Version](#version)
-  - [Public RoadMap](#public-roadmap)
   - [File Structure](#file-structure)
   - [Browser Support](#browser-support)
-  - [Don't Buy a Coffee for Us Instead Support Us](#dont-buy-a-coffee-for-us-instead-support-us)
-  - [More from Iqonic Design](#more-from-iqonic-design)
-  - [Reporting Issues](#reporting-issues)
-  - [Special Thanks](#special-thanks)
-  - [Change Log](#change-log)
   - [Follow Us](#follow-us)
   - [Licensing](#licensing)
 
@@ -75,16 +67,20 @@ You can use following method to get started with React Application of the EHKit 
 
 ### Part 2: Using NPM
 Start working with the EHKit system
-1. Install Dependency
+1. Clone Git Repo
+```
+git clone https://github.com/abudaudhossain/EHkit.com
+```
+2. Install Dependency
 ```
 npm install
 ```
 
-2. Run on development 
+3. Run on development 
 ```
 npm start
 ```
-3. Build for production
+4. Build for production
 ```
 npm run build
 ```
