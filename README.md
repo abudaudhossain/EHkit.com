@@ -149,20 +149,119 @@ src
   │    |    |   ├── feature.css
   │    |    |   └── index.js
   │    ├── Home 
+  |    |    ├── Banner
+  │    |    |   ├── banner.css
+  │    |    |   ├── Banner.js
+  │    |    |   ├── BannerSlide.js
+  │    |    |   └── VideoPlayer.js
+  |    |    ├── Business
+  │    |    |   ├── Business.js
+  │    |    |   ├── businessCard.css
+  │    |    |   └── BusinessCard.js
+  |    |    ├── service
+  │    |    |   ├── Service.js
+  │    |    |   ├── services.css
+  │    |    |   └── Services.js
+  |    |    ├── Blogs.js
+  |    |    ├── Destination.js
+  |    |    ├── Features.js
+  |    |    └── PopularProducts.js
   │    ├── Layout
+  |    |    ├── Footer
+  │    |    |   ├── Footer.css
+  │    |    |   └── Footer.js
+  |    |    ├── Menubar
+  │    |    |   ├── menubar.ccs
+  │    |    |   └── Menubar.js
+  |    |    └── index.js
   │    ├── packageDetails
+  │    |    ├── BookingForm.js
+  │    |    ├── Details.css
+  |    |    └── Details.js
   │    ├── PrivateRoute
+  |    |    └── PrivateRoute.js
   │    ├── Product
+  |    |    └── ProductContainer
+  │    |    |   └── index.js
   │    ├── Profile
+  |    |    ├── MyProfile
+  │    |    |   └── MyProfile.js
+  |    |    ├── Order
+  │    |    |   ├── Order.css
+  │    |    |   ├── Order.js
+  │    |    |   └── Orders.js
+  |    |    ├── ProfileUpdate
+  │    |    |   └── ProfileUpdate.js
+  |    |    └── Profile.js
   │    ├── Purchase
+  │    |    ├── MyImgMagnifier.js
+  │    |    ├── purchase.css
+  │    |    ├── Purchase.js
+  │    |    └── PurchaseForm.js
   │    └── shared
-  ├── context
+  |    |    ├── Auth
+  │    |    |   └── MediaAuth.js
+  |    |    ├── blog
+  │    |    |   ├── blog.css
+  │    |    |   └── Blog.js
+  |    |    ├── destination
+  │    |    |   ├── destination.css
+  │    |    |   └── Destination.js
+  |    |    ├── Package
+  │    |    |   ├── package.css
+  │    |    |   └── Package.js
+  |    |    ├── reviews
+  │    |    |   ├── Review.js
+  │    |    |   ├── Reviews.css
+  │    |    |   └── Reviews.js
+  |    |    ├── SubBanner
+  │    |    |   ├── subBanner.css
+  │    |    |   └── SubBanner.js
+  |    |    ├── team
+  │    |    |   ├── Member.js
+  │    |    |   ├── team.css
+  │    |    |   └── Team.js
+  │    |    └── Media.js
+  ├── context/
   ├── data
+  |   ├── banner.js
+  |   ├── business.js
+  |   ├── features.js
+  |   └── product.js
   ├── firebase
+  |   ├── firebase.config.js
+  |   └── firebase.initialize.js
   ├── hooks
+  |   ├── baseUrl.js
+  |   ├── localDB.js
+  |   └── useFirebase.js
   ├── pages
-  ├── routes
-  ├── utils
+  |   ├── About
+  |   |    └── index.js
+  |   ├── Contact
+  |   |    └── index.js
+  |   ├── DashBoard
+  |   |    └── index.js
+  |   ├── Details
+  |   |    └── Blog.js
+  |   ├── Home
+  |   |    └── index.js
+  |   ├── Login
+  │   |    ├── log.css
+  |   |    └── index.js
+  |   ├── MyProfile
+  |   |    └── index.js
+  |   ├── MyProfile
+  │   |    ├── index.js
+  |   |    └── Products.css
+  |   ├── ProfileUpdate
+  │   |    └── index.js
+  |   ├── Purchase
+  │   |    └── index.js
+  |   ├── SignUp
+  │   |    └── index.js
+  ├── routes/
+  ├── utils/
   ├── App.css
   ├── App.js
   ├── App.test.js
