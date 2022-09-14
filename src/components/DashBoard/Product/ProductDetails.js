@@ -1,15 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import { useParams } from 'react-router-dom'
 import { getProduct } from '../../../data/products';
 
 import { Link } from "react-router-dom"
+import axios from 'axios';
+import baseUrl from '../../../hooks/baseUrl';
 
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const product = getProduct(parseInt(id))
+  const [product, setProduct] = useState()
+  const [error, setError] = useState();
+
+  useEffect(() => {
+
+    axios.get(`${baseUrl}/product/${id}`,)
+      .then(function (response) {
+        const result = response.data.data;
+
+        setProduct(result.product)
+        // handle success
+        setError(null)
+      })
+      .catch(function (err) {
+        const result = err.response.data;
+        // handle error
+        setError(result.errorLog)
+        console.log(error)
+      })
+  }, [])
+
+
+  if (!product) {
+    return;
+  }
   const { image, title, description, price, minimumOrderQuantity, availableQuantity, feature, category, brand } = product;
+
   return (
     <section>
       <Container>

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import "./menubar.css"
-import logo from "../../../assets/images/logo/logo.png"
+
 
 import {
     Container,

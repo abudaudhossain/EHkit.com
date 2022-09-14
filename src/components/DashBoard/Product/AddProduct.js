@@ -1,13 +1,23 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import { useForm } from "react-hook-form";
 
 import { useNavigate } from "react-router-dom";
+import baseUrl from '../../../hooks/baseUrl';
+import useFirebase from "../../../hooks/useFirebase"
 
 
 
 const AddProduct = () => {
+  const [catagories, setCategories] = useState([])
+  const [features, setFeatures] = useState([])
+  const [error, setError] = useState(null);
   let navigate = useNavigate();
   const { register, handleSubmit, } = useForm();
+  const { userData } = useFirebase();
+
+
+
   const onSubmit = async data => {
 
     // image uploading
@@ -21,12 +31,78 @@ const AddProduct = () => {
     }).then(res => res.json())
       .then(result => {
         const imageUrl = result.data.url;
-        data.image = imageUrl
-        console.log(data);
+        data.image = imageUrl;
+
+        // upload product in database 
+
+        axios.post(`${baseUrl}/addNewProduct`, data, {
+          headers: {
+            'authorization': `Bearer ${userData?.jwt}`
+          }
+        })
+          .then(function (response) {
+            const result = response.data.data;
+            // handle success
+            // serUser(result)
+            console.log(result);
+            navigate("/dashboard/productList")
+            setError(null)
+          })
+          .catch(function (err) {
+            const result = err.response.data;
+            // handle error
+            setError(result.errorLog)
+          })
+
+
+
       })
 
     // navigate("/dashboard/productList", { replace: true })
   };
+
+  console.log(error)
+
+  useEffect(() => {
+
+    axios.get(`${baseUrl}/categories`,)
+      .then(function (response) {
+        const result = response.data.data;
+
+        setCategories(result.catagories)
+        // handle success
+        setError(null)
+      })
+      .catch(function (err) {
+        const result = err.response.data;
+        // handle error
+        setError(result.errorLog)
+        console.log(error)
+      })
+  }, [])
+
+
+  const categoryHandler = (e) => {
+    console.log(e.target.value)
+
+    axios.get(`${baseUrl}/features`,)
+      .then(function (response) {
+        const result = response.data.data;
+
+        setFeatures(result.features)
+        // handle success
+        setError(null)
+      })
+      .catch(function (err) {
+        const result = err.response.data;
+        // handle error
+        setError(result.errorLog)
+        console.log(error)
+      })
+
+
+
+  }
 
   return (
     <section>
@@ -53,14 +129,25 @@ const AddProduct = () => {
         </div>
 
         <div className="form-floating mb-3">
-          <input type="text" className="form-control" placeholder="Brand name"  {...register("feature", { required: true })} />
-          <label htmlFor="floatingPassword">Feature</label>
+          <select className="form-select form-control" aria-label="select category" {...register("categoryToken", { required: true })} onChange={categoryHandler} defaultValue={'DEFAULT'}>
+            <option value="DEFAULT">Select A Category</option>
+            {
+              catagories?.map((category, index) => <option value={category.token} key={index}>{category.title}</option>)
+            }
+          </select>
         </div>
 
         <div className="form-floating mb-3">
-          <input type="text" className="form-control" placeholder="Category"  {...register("category", { required: true })} />
-          <label htmlFor="floatingPassword">Category</label>
+          <select className="form-select form-control" aria-label="select feature" {...register("featureToken", { required: true })} defaultValue={'DEFAULT'}>
+            <option value="DEFAULT">Select A Feature</option>
+            {
+              features?.map((feature, index) => <option value={feature?.token} key={index}>{feature?.title}</option>)
+            }
+          </select>
         </div>
+
+
+
         <div className="form-floating mb-3">
           <input type="text" className="form-control" placeholder="Feature"  {...register("brand", { required: true })} />
           <label htmlFor="floatingPassword">Brand Name</label>

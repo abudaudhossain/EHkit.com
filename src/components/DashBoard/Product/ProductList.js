@@ -1,14 +1,37 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./product.css"
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import productsInfo from "../../../data/products";
+import { useState } from 'react';
+import axios from 'axios';
+import baseUrl from '../../../hooks/baseUrl';
 
 
 
 const ProductList = () => {
+  const [products, setProducts] = useState([])
+  const [error, setError] = useState()
 
-  const products = productsInfo();
+  useEffect(() => {
+
+    axios.get(`${baseUrl}/allProduct`,)
+      .then(function (response) {
+        const result = response.data.data;
+
+        setProducts(result.products)
+        // handle success
+        setError(null)
+      })
+      .catch(function (err) {
+        const result = err.response.data;
+        // handle error
+        setError(result.errorLog)
+        console.log(error)
+      })
+  }, [])
+
+// console.log(products)
 
   return (
     <section>
@@ -24,7 +47,7 @@ const ProductList = () => {
         </thead>
         <tbody>
           {
-            products.map((product, index) => {
+            products?.map((product, index) => {
               return (<tr key={index}>
                 <th scope="row">{index}</th>
                 <td className="tb-img-box">
@@ -33,12 +56,12 @@ const ProductList = () => {
                 <td>{product.title}</td>
                 <td>{product.price}</td>
                 <td>
-                  <Link to={`/dashboard/productDetails/${product.id}`}>Details</Link>
+                  <Link to={`/dashboard/productDetails/${product.token}`}>Details</Link>
                 </td>
               </tr>)
             })
           }
-          
+
         </tbody>
       </table>
     </section>
